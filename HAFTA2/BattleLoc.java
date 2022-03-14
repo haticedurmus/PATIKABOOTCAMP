@@ -13,7 +13,7 @@ public abstract class BattleLoc extends Location {
 
 	public boolean getLocation() {
 		int obsCount = obstacle.count();
-		System.out.println("suan buradas�n�z : " + this.getName());
+		System.out.println("suan buradasiniz : " + this.getName());
 		System.out.println("Dikkatli ol! Burada " + obsCount + " tane " + obstacle.getName() + " yasiyor !");
 		System.out.print("<S>avas veya <K>ac :");
 		String selCase = scan.nextLine();
@@ -35,7 +35,7 @@ public abstract class BattleLoc extends Location {
 			}
 			
 			if(player.getHealth() <= 0) {
-				System.out.println("oldunuz !");
+				System.out.println("öldunuz !");
 				return false;
 			}
 		
@@ -116,9 +116,10 @@ public abstract class BattleLoc extends Location {
 			}
 
 			if (obstacle.getHealth() < player.getHealth()) {
-				System.out.println("D��man� yendiniz !");
+				System.out.println("Dusmani yendiniz !");
 
 				if(this.getName()== "Mine"){
+					// madende savasmamız durumunda gerceklesecek olasılıkların hesaplandığı fonksiyondur.
 					minePossibilities();
 				}
 				else {
