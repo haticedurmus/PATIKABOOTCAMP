@@ -13,7 +13,8 @@ public class StatikUrunVeMarkaEkleme {
     public TreeSet<Marka> markalarListesi;
     public List<CepTelefonu> telefonlarListesi = new ArrayList<>();
     public List<NoteBook> notebooklarListesi = new ArrayList<>();
-
+     
+    //static olarak markaları ekler
     public TreeSet<Marka> addMarka() {
         markalarListesi = new TreeSet<>(new Comparator<Marka>() {
             @Override
@@ -32,7 +33,8 @@ public class StatikUrunVeMarkaEkleme {
         markalarListesi.add(new Marka(9, "Moster"));
         return markalarListesi;
     }
-
+    
+    //static olarak cep telefonları ekler
     public List<CepTelefonu> addCeptelefonu() {
         telefonlarListesi.add(new CepTelefonu(1, 3000, 20, 100, "Cep Telefonu",
                 "Samsung Galaxy A51", "Samsung", 6, 8, 128, 4300, "Kırmızı"));
@@ -45,7 +47,7 @@ public class StatikUrunVeMarkaEkleme {
         return telefonlarListesi;
     }
 
-
+    //static olarak notebook ekler
     public List<NoteBook> addNoteBook() {
         notebooklarListesi.add(new NoteBook(1, 7000, 20, 100, "Notebook",
                 "Huawei Matebook", "Huawei", 15, 16, 512));
