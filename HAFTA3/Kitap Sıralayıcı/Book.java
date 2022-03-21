@@ -19,7 +19,8 @@ public class Book implements Comparable<Book>{
     public int getPageCount() {
         return pageCount;
     }
-
+ 
+    //Kitapları isimlerine göre sıralar
     @Override
     public int compareTo(Book o) {
         return this.getBookName().compareTo(o.getBookName());
