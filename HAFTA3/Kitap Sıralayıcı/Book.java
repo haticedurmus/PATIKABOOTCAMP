@@ -1,5 +1,3 @@
-package com.company.company;
-
 public class Book implements Comparable<Book>{
     private String bookName;
     private int pageCount;
@@ -25,17 +23,7 @@ public class Book implements Comparable<Book>{
     public int compareTo(Book o) {
         return this.getBookName().compareTo(o.getBookName());
     }
-
-
-
-
-//    @Override
-//    public int compareTo(Book o) {
-//        return compareBookName(this,o);
-//    }
-//
-//    public int compareBookName(Book o1, Book o2) {
-//        return o1.getBookName().compareTo(o2.getBookName());
-//    }
-
+    
 }
+
+
