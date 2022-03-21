@@ -14,7 +14,7 @@ public class PatikaStore {
 
     public TreeSet<Marka> markalarListesi = statikUrunVeMarkaEkleme.addMarka();
     public List<CepTelefonu> cepTelefonListesi = statikUrunVeMarkaEkleme.addCeptelefonu();
-    ;
+    
     public List<NoteBook> notebookListesi = statikUrunVeMarkaEkleme.addNoteBook();
 
     //PatikaStore'un giris ekranidir.
@@ -68,7 +68,8 @@ public class PatikaStore {
                 break;
         }
     }
-
+    
+    //notebook işlemleri için seçilen numaraya göre işleme yönlendirir.
     public void notebookIslemleri(int choice) {
         Scanner scan = new Scanner(System.in);
         switch (choice) {
@@ -116,7 +117,8 @@ public class PatikaStore {
                 musteriIslemleri("Notebbok");
         }
     }
-
+    
+    //cep telefonu işlemleri için seçilen numaraya göre işleme yönlendirir.
     public void cepTelefonuIslemleri(int choice) {
         Scanner scan = new Scanner(System.in);
         switch (choice) {
@@ -164,7 +166,8 @@ public class PatikaStore {
                 musteriIslemleri("Cep Telefonu");
         }
     }
-
+    
+    //musterinin yaptığı her işlem sonrası devam etmek isteyip istemeyeceğini sorar
     public void baskaIslem() {
         System.out.println("Başka bir işlem yapmak istiyor musunuz? ");
         System.out.println("E(evet) / H(hayır)");
