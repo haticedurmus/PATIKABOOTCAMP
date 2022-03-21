@@ -1,6 +1,5 @@
 package ListClass;
 
-
 public class MyList<T extends Object> {
 
     private T[] array;
