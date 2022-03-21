@@ -25,6 +25,7 @@ public class Main {
 
         System.out.println("------------------------------------------");
 
+        //Kitapları sayfa sayısına göre sıralar
         TreeSet<Book> secondBooks = new TreeSet<>(new Comparator<Book>() {
             @Override
             public int compare(Book o1, Book o2) {
