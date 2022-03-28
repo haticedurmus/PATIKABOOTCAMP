@@ -26,9 +26,9 @@ public class OddEvenSeperator extends Thread {
             e.printStackTrace();
         }
 
-        // thread geldiğinde diğer threadleri bekleten ve elindeki listedeki sayıları even ve odd listlere dagitan döngü
-        synchronized (LOCK) {
-            for (int i = 0; i < mainList.size(); i++) {
+      // thread geldiğinde diğer threadleri bekleten ve elindeki listedeki sayıları even ve odd listlere dagitan döngü
+      for (int i = 0; i < mainList.size(); i++) {
+            synchronized (LOCK) {
                 num = mainList.get(i);
                 if (num % 2 == 0) {
                     evenList.add(num);
